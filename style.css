@@ -1,0 +1,301 @@
+html {
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  box-sizing: border-box;
+  background: #03011d;
+}
+h1,
+h2,
+h3, 
+h4,
+a {
+  margin: 0;
+  font-family: "Kalam", cursive;
+  color: white;
+}
+
+.header {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 75%;
+}
+#logga {
+  width: 16em;
+  object-fit: contain;
+  margin-top: 2em;
+}
+.year {
+  margin: 0;
+  font-size: 4.5em;
+}
+h2 {
+  font-size: 2.5em;
+}
+#tree{
+  position: absolute;
+  top:90px;
+  left: 55%;
+  font-size: 6rem;
+  margin:0;
+  opacity: 0;
+}
+.senaste-container{
+  position: relative;
+}
+#mrs{
+  position: absolute;
+  top:90px;
+  left: 15%;
+  font-size: 6rem;
+  margin:0;
+  opacity: 0;
+}
+#tree:hover, #mrs:hover{
+  opacity: 1;
+}
+.earth_container {
+  width: 100%;
+  position: relative;
+  margin: 0;
+}
+
+svg {
+  height: 512px;
+  width: 100vw;
+  margin-bottom: 20px;
+}
+#earth_full {
+  background-image: url("images/earth.png");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+}
+#earth_half {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  margin: 0;
+  overflow: hidden;
+  object-fit: cover;
+ 
+}
+
+
+h3 {
+  font-size: 4rem;
+  padding-top: 0.25em;
+}
+h3:hover {
+  cursor: pointer;
+  color: #901a1a;
+  transform: scale(1.3);
+  transition: transform 400ms ease-in;
+}
+a {
+  text-decoration: none;
+}
+
+.grid_container {
+ 
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 100px);
+  grid-template-rows: auto;
+  grid-gap: 1rem;
+  justify-content: center;
+  text-align: center;
+}
+
+.lucka {
+  height: 100px;
+  text-align: center;
+  
+  border-radius: 1em;
+}
+@media (min-width: 778px){
+  .grid_container{
+    width: 70%;
+    grid-template-columns: repeat(auto-fill, 140px);
+  } 
+  .lucka {
+    height: 140px;
+  }
+}
+
+@media (min-width: 1080px){
+  .grid_container{
+    width: 60%;
+    grid-template-columns: repeat(auto-fill, 140px);
+  } 
+}
+
+@media (min-width: 1500px){
+  .grid_container{
+    width: 50%; 
+  } 
+}
+
+@media (min-width: 1800px){
+  .grid_container{
+    width: 40%;
+    grid-template-columns: repeat(auto-fill, 140px);
+  } 
+}
+
+.lucka:nth-child(9n + 1) {
+  background: #cc9901;
+
+}
+.lucka:nth-child(9n + 2) {
+  background: rgba(183, 13, 0);
+}
+.lucka:nth-child(9n + 3) {
+  background: #259627;
+}
+.lucka:nth-child(9n + 4) {
+  background: rgba(183, 13, 0);
+}
+.lucka:nth-child(9n + 5) {
+  background: #cc9901;
+}
+.lucka:nth-child(9n + 6) {
+  background: #259627;
+}
+.lucka:nth-child(9n + 7) {
+  background: #cc9901;
+}
+.lucka:nth-child(9n + 8) {
+  background: #259627;
+}
+.lucka:nth-child(9n + 9) {
+  background: rgba(183, 13, 0);
+}
+
+footer {
+  text-align: center;
+}
+footer h3 {
+  margin-top: 3rem;
+  font-size: 1.5em;
+}
+
+/* Senaresidan */
+.h2{
+  margin: 200px;
+  text-align: center;
+  font-size: 4em;
+  color:rgb(216, 166, 30);
+}
+.wrap {
+  perspective: 500px;
+  perspective-origin: 50% 50%;
+}
+
+.cube {
+  position: relative;
+  margin: 50px auto;
+  width: 100px;
+  height: 100px;
+  transform-style: preserve-3d;
+}
+.face {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  color: #666;
+  font-size: 18px;
+  text-align: center;
+  line-height: 100px;
+  box-shadow: inset 0 0 4px rgba(294, 94, 100, 0.5);
+  background-color: rgba(40, 237, 255, 0.5);
+}
+.front {
+  transform: translateZ(50px);
+}
+.smiley {
+  display: block;
+  position: absolute;
+  bottom: 35px;
+  left: 15px;
+}
+.back {
+  transform: translateZ(-50px) rotateY(-180deg);
+}
+.left {
+  transform: translateX(-50px) rotateY(-90deg);
+}
+
+.right {
+  transform: translateX(50px) rotateY(90deg);
+}
+.top {
+  transform: translateY(-50px) rotateX(90deg);
+}
+
+.bottom {
+  transform: translateY(50px) rotateX(-90deg);
+}
+
+.rotate-y {
+  animation: spinY 10s infinite linear;
+}
+
+
+
+@keyframes spinY {
+  from {
+    transform: rotateY(0);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+.button{
+  position: relative;
+  width: 100%;
+  height: 200px;
+  align-items: center;
+}
+h4{
+  color:rgb(216, 166, 30);
+  text-align: center;
+  font-size: 2em;
+}
+#sista {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background:rgb(216, 166, 30);
+  padding: 0.5em 1.5em;
+  font-size: 2em;
+  border-radius: 10px;
+  box-shadow: rgb(251, 209, 69) 2px 2px 7px;
+}
+.footer{
+  position: relative;
+  width: 100%;
+  height: 200px;
+  align-items: center;
+}
+.footer-logga{
+  position: absolute;
+  width: 200px;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
