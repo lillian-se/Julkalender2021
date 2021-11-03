@@ -5,7 +5,7 @@ let nr4 = document.getElementById("nr4");
 let nr5 = document.getElementById("nr5");
 if (new Date() >= new Date("Thu Sep 30 2021 0:01")) {
   nr1.innerHTML =
-    "<a href='./lucka18' target='blank'><h3>1</h3></a>";
+    "<a href='lucka18.pdf' target='blank'><h3>1</h3></a>";
   nr2.innerHTML =
     "<a href='https://www.google.com/' target='blank'><h3>2</h3></a>";
   nr3.innerHTML =
